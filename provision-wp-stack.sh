@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
 # nginx / fpm
-rm -rf /etc/apt/sources.list.d/*
-apt-get update > /dev/null
-
-apt-get install -y nginx php5-fpm php5-cli
+apt-get install -y nginx php5-fpm php5-cli php5-mysql
 
 cp nginx.conf /etc/nginx/nginx.conf
 /etc/init.d/nginx restart

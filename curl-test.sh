@@ -5,7 +5,7 @@ echo "raw:"
 curl --silent "$base_url/test.php"
 exit 0
 
-result=`curl --silent "$base_url/test.php"`
+result=`curl --silent "$base_url/"`
 
 echo "result:"
 
