@@ -35,6 +35,7 @@ rdiff-backup --list-changed-since 1D /tmp/backup | grep "new\|changed" | awk -F 
 cd /
 tar -cf /tmp/diff.tar -T /tmp/diff.txt
 gzip /tmp/diff.tar
+ls -lah /tmp/diff.tar.gz
 
 cd /tmp
 mkdir -p /root/.ssh
