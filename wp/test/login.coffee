@@ -8,7 +8,7 @@ describe "The Login Page", ->
 
   it 'redirects to dashboard on successful login', ->
     casper.fill '#loginform', {
-      log: 'adminz',
+      log: 'admin',
       pwd: 'p'
     }
 
