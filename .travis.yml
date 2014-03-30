@@ -5,11 +5,6 @@ php:
 env:
   - DB=mysql
 
-mysql:
-  database: wp_l
-  username: root
-  encoding: utf8
-
 before_install:
   - sudo rm -rf /etc/apt/sources.list.d/*
   - sudo add-apt-repository --yes ppa:chris-lea/node.js
