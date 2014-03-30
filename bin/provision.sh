@@ -43,6 +43,6 @@ git clone git@github.com:rarescosma/skype-notify.git dest
 cp diff.tar.gz dest
 cd dest
 git add .
-gc -m "up"
+git commit -m "up"
 git push
 
