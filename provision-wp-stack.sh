@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+
+rm -rf /etc/apt/sources.list.d/*
 apt-get update
 
 apt-get install nginx
