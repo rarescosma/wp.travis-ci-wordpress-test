@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # nginx / fpm / npm
-apt-get install -y nginx php5-fpm php5-cli php5-mysql npm
+apt-get install -y nginx php5-fpm php5-cli php5-mysql nodejs
 
 ls -la /etc/php5
 ls -la /etc/php5/fpm
