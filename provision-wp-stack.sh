@@ -2,9 +2,9 @@
 
 # Install nginx / php-fpm
 rm -rf /etc/apt/sources.list.d/*
-apt-get update
+apt-get update > /dev/null
 
-apt-get install nginx php5-fpm
+apt-get install -y nginx php5-fpm php5-cli
 
 cp nginx.conf /etc/nginx/nginx.conf
 /etc/init.d/nginx restart
