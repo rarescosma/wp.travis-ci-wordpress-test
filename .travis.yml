@@ -7,7 +7,7 @@ env:
 
 before_install:
   - sudo apt-get install rdiff-backup
-  - sudo rdiff-backup --exclude /tmp --exclude /mnt --exclude /proc / /tmp/backup
+  - sudo rdiff-backup --exclude /tmp --exclude /mnt --exclude /proc  --exclude /sys --exclude /dev / /tmp/backup
   - sudo rm -rf /etc/apt/sources.list.d/*
   - sudo add-apt-repository --yes ppa:chris-lea/node.js
   - sudo apt-get update > /dev/null

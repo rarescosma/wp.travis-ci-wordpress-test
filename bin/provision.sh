@@ -30,7 +30,7 @@ npm install
 cp -R /tmp/wp/node_modules /root/node_modules
 
 # rdiff
-rdiff-backup --exclude /tmp --exclude /mnt --exclude /proc / /tmp/backup
+rdiff-backup --exclude /tmp --exclude /mnt --exclude /proc --exclude /sys --exclude /dev / /tmp/backup
 rdiff-backup --list-changed-since 1D /tmp/backup | grep "new\|changed" | awk -F ' ' '{print $2}' | tail -n+2 > /tmp/diff.txt
 cd /
 tar -cf /tmp/diff.tar -T /tmp/diff.txt
