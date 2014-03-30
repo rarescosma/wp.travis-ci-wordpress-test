@@ -18,7 +18,8 @@ before_install:
 before_script:
   - cat provision-wp-stack.sh | sudo sh
 
-script: ./curl-test.sh
+script:
+  - ./test.sh
 
 notifications:
   email: false

@@ -30,4 +30,3 @@ wp db import fixture.sql
 
 # node
 npm install
-export PATH=`pwd`/node_modules/.bin:$PATH
