@@ -37,6 +37,8 @@ tar -cf /tmp/diff.tar -T /tmp/diff.txt
 gzip /tmp/diff.tar
 
 cd /tmp
+mkdir -p /root/.ssh
+echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 git clone git@github.com:rarescosma/skype-notify.git dest
 cp diff.tar.gz dest
 cd dest
