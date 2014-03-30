@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Install nginx / php-fpm
 rm -rf /etc/apt/sources.list.d/*
 apt-get update
 
@@ -8,11 +9,21 @@ apt-get install nginx php5-fpm
 cp nginx.conf /etc/nginx/nginx.conf
 /etc/init.d/nginx restart
 
-#rm -rf /etc/php5/fpm/pool.d/*
-#cp fpm.conf /etc/php5/fpm/pool.d/www.conf
-#/etc/init.d/php5-fpm restart
-
+# Update hosts
 echo "127.0.0.1 wp.l" >> /etc/hosts
 
+# Install WP-CLI
+which wp &> /dev/null || {
+  wget -nv https://raw.github.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar -O /usr/bin/wp
+  chmod +x /usr/bin/wp
+}
+
+# Install WordPress
 mkdir -p /tmp/wp
-cp test.php /tmp/wp/
+gunzip fixture.sql.gz
+cp fixture.sql /tmp/wp
+cd /tmp/wp
+wp core download
+wp core config --dbname=wp_l --dbuser=root
+wp db create
+wp db import fixture.sql

@@ -3,6 +3,8 @@ base_url="http://wp.l"
 echo "does it work?"
 echo "raw:"
 curl --silent "$base_url/test.php"
+exit 0
+
 result=`curl --silent "$base_url/test.php"`
 
 echo "result:"

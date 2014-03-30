@@ -4,3 +4,5 @@ php:
 before_script:
   - cat provision-wp-stack.sh | sudo sh
 script: ./curl-test.sh
+notifications:
+  email: false
