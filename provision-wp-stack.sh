@@ -13,10 +13,8 @@ cp nginx.conf /etc/nginx/nginx.conf
 echo "127.0.0.1 wp.l" >> /etc/hosts
 
 # Install WP-CLI
-which wp &> /dev/null || {
-  wget -nv https://raw.github.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar -O /usr/bin/wp
-  chmod +x /usr/bin/wp
-}
+wget -nv https://raw.github.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar -O /usr/bin/wp
+chmod +x /usr/bin/wp
 
 # Install WordPress
 mkdir -p /tmp/wp
