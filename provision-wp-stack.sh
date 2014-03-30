@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+apt-get update
+
 apt-get install nginx
 apt-get install php5-fpm
 
@@ -11,4 +13,5 @@ cp fpm.conf /etc/php5/fpm/pool.d/www.conf
 
 echo "127.0.0.1 wp.l" >> /etc/hosts
 
+mkdir -p /tmp/wp
 cp test.php /tmp/wp/
