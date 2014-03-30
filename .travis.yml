@@ -15,11 +15,11 @@ before_install:
   - sudo add-apt-repository --yes ppa:chris-lea/node.js
   - sudo apt-get update > /dev/null
 
-before_script:
-  - cat provision-wp-stack.sh | sudo sh
+install:
+  - cat bin/provision.sh | sudo sh
 
 script:
-  - ./test.sh
+  - ./bin/test.sh
 
 notifications:
   email: false
