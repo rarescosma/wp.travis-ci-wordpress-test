@@ -1,0 +1,23 @@
+{
+  "name": "travis-ci-wordpress-test",
+  "description": "Integration tests for WordPress.",
+  "version": "1.0.0",
+  "author": "Rares Cosma",
+  "dependencies": {
+    "phantomjs": "*",
+    "casperjs": "1.1.0-beta3",
+    "mocha": "*",
+    "chai": "*",
+    "mocha-casperjs": "*",
+    "casper-chai": "*",
+    "grunt-cli": "*",
+    "underscore": "*",
+    "grunt-shell": "*",
+    "querystring": "*",
+    "randomstring": "*",
+    "load-grunt-tasks": "*",
+    "grunt-clear": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-clean": "*"
+  }
+}

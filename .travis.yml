@@ -1,11 +1,23 @@
 language: php
 php:
   - 5.4
+
+env:
+  - DB=mysql
+
+mysql:
+  database: wp_l
+  username: root
+  encoding: utf8
+
 before_install:
   - sudo rm -rf /etc/apt/sources.list.d/*
   - sudo apt-get update > /dev/null
+
 before_script:
   - cat provision-wp-stack.sh | sudo sh
+
 script: ./curl-test.sh
+
 notifications:
   email: false

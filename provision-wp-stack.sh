@@ -16,10 +16,15 @@ alias wp='wp --allow-root'
 
 # wp
 mkdir -p /tmp/wp
-gunzip fixture.sql.gz
-cp fixture.sql /tmp/wp
+gunzip wp/fixture.sql.gz
+cp -R wp/* /tmp/wp/
+
 cd /tmp/wp
 wp core download
 wp core config --dbname=wp_l --dbuser=root
 wp db create
 wp db import fixture.sql
+
+# node
+npm install
+export PATH=`pwd`/node_modules/.bin:$PATH
