@@ -12,7 +12,9 @@ mysql:
 
 before_install:
   - sudo rm -rf /etc/apt/sources.list.d/*
+  - sudo add-apt-repository --yes ppa:chris-lea/node.js
   - sudo apt-get update > /dev/null
+  - ls -la /etc/php5/fpm/conf.d
 
 before_script:
   - cat provision-wp-stack.sh | sudo sh
