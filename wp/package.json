@@ -10,14 +10,8 @@
     "chai": "*",
     "mocha-casperjs": "*",
     "casper-chai": "*",
-    "grunt-cli": "*",
     "underscore": "*",
-    "grunt-shell": "*",
     "querystring": "*",
-    "randomstring": "*",
-    "load-grunt-tasks": "*",
-    "grunt-clear": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-clean": "*"
+    "randomstring": "*"
   }
 }
